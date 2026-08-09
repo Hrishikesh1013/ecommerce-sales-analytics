@@ -1,0 +1,25 @@
+Raw rows loaded: 3025
+Removed 25 duplicate rows
+Standardized casing for 'region' and 'payment_method'
+Removed 5 rows with invalid (negative) quantity
+Flagged 8 unit_price outliers above 13030.48 (likely entry errors) and capped them
+Missing values before imputation:
+region            60
+customer_age      90
+delivery_days     60
+rating           180
+Filled missing 'region' with 'Unknown', 'customer_age' and 'delivery_days' with median
+Left 'rating' missing values as-is (excluded from rating aggregates, not imputed)
+
+Clean rows saved: 2995 -> /home/claude/portfolio-project/data/ecommerce_orders_clean.csv
+
+KEY INSIGHTS
+------------
+- Total revenue across 2995 orders: ₹12,831,623.18
+- Average order value: ₹4,284.35
+- Top-performing category: Electronics (₹3,471,519.68)
+- Top-performing region: East (₹2,686,410.32)
+- Average customer rating: 4.04 / 5
+- Avg delivery time for low ratings (1-2): 3.7 days
+- Avg delivery time for high ratings (4-5): 3.7 days
+  -> No clear delivery-rating relationship found in this data
